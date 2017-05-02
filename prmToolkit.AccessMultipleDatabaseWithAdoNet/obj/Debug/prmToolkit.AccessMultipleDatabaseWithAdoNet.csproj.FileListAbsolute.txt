@@ -1,0 +1,8 @@
+C:\Users\Paulo Rogério\Documents\GitHub\prmToolkit.AccessMultipleDatabaseWithAdoNet\prmToolkit.AccessMultipleDatabaseWithAdoNet\bin\Debug\prmToolkit.AccessMultipleDatabaseWithAdoNet.dll.config
+C:\Users\Paulo Rogério\Documents\GitHub\prmToolkit.AccessMultipleDatabaseWithAdoNet\prmToolkit.AccessMultipleDatabaseWithAdoNet\bin\Debug\prmToolkit.AccessMultipleDatabaseWithAdoNet.dll
+C:\Users\Paulo Rogério\Documents\GitHub\prmToolkit.AccessMultipleDatabaseWithAdoNet\prmToolkit.AccessMultipleDatabaseWithAdoNet\bin\Debug\prmToolkit.AccessMultipleDatabaseWithAdoNet.pdb
+C:\Users\Paulo Rogério\Documents\GitHub\prmToolkit.AccessMultipleDatabaseWithAdoNet\prmToolkit.AccessMultipleDatabaseWithAdoNet\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+C:\Users\Paulo Rogério\Documents\GitHub\prmToolkit.AccessMultipleDatabaseWithAdoNet\prmToolkit.AccessMultipleDatabaseWithAdoNet\bin\Debug\MySql.Data.dll
+C:\Users\Paulo Rogério\Documents\GitHub\prmToolkit.AccessMultipleDatabaseWithAdoNet\prmToolkit.AccessMultipleDatabaseWithAdoNet\bin\Debug\FirebirdSql.Data.FirebirdClient.pdb
+C:\Users\Paulo Rogério\Documents\GitHub\prmToolkit.AccessMultipleDatabaseWithAdoNet\prmToolkit.AccessMultipleDatabaseWithAdoNet\obj\Debug\prmToolkit.AccessMultipleDatabaseWithAdoNet.dll
+C:\Users\Paulo Rogério\Documents\GitHub\prmToolkit.AccessMultipleDatabaseWithAdoNet\prmToolkit.AccessMultipleDatabaseWithAdoNet\obj\Debug\prmToolkit.AccessMultipleDatabaseWithAdoNet.pdb

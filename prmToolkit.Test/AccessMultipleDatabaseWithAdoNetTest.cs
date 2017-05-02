@@ -1,37 +1,4 @@
-# prmToolkit
-
-# AccessMultipleDatabaseWithAdoNet
-Acesse mais de um tipo de banco de dados de forma fácil via ADO.NET.
-
-Atualmente dando suporte aos bancos.
-
-- SqlServer
-
-- MySql
-
-- Firebird
-
-
-
-É possível implementar outros bancos de dados de forma fácil!
-
-### Installation - AccessMultipleDatabaseWithAdoNet
-
-Para instalar, abra o prompt de comando Package Manager Console do seu Visual Studio e digite o comando abaixo:
-
-Para adicionar somente a referencia a dll
-```sh
-Install-Package prmToolkit.AccessMultipleDatabaseWithAdoNet
-```
-
-Para adicionar somente as classes
-```sh
-Install-Package prmToolkit.AccessMultipleDatabaseWithAdoNet-Source
-```
-### Exemplo de como usar
-
-```sh
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using prmToolkit.AccessMultipleDatabaseWithAdoNet;
 using prmToolkit.AccessMultipleDatabaseWithAdoNet.Enumerators;
 using System.Collections.Generic;
@@ -40,13 +7,13 @@ namespace prmToolkit.Test
 {
 
     [TestClass]
-    public class AccessMultipleDatabaseWithAdoNetTest : AbstractRepository 
+    public class AccessMultipleDatabaseWithAdoNetTest : AbstractRepository //herrda
     {
         [TestMethod()]
         public void ObterDadosTest()
         {
             //Define a string de conexão
-            string  stringConexao = "Server=seu ip; Database=nome_do_banco; Port=3306; Uid=usuario; Pwd=senha;"
+            string stringConexao = "Server=seu ip; Database=nome_do_banco; Port=3306; Uid=usuario; Pwd=senha;";
             
             //Monta a query
             string query = @"select u.nome, u.login, u.senha from usuario u;";
@@ -69,5 +36,3 @@ namespace prmToolkit.Test
         public string Senha { get; set; }
     }
 }
-
-```
