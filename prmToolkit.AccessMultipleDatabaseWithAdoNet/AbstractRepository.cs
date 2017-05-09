@@ -43,7 +43,7 @@ namespace prmToolkit.AccessMultipleDatabaseWithAdoNet
         }
 
         /// <summary>
-        /// Insere, Atualiza e excluí operações do banco de dados
+        /// Executa uma instrução SQL contra o objeto Connection de dados do .NET Framework e retorna o número de linhas afetadas.
         /// </summary>
         /// <param name="commandSql"></param>
         /// <returns></returns>
@@ -66,6 +66,34 @@ namespace prmToolkit.AccessMultipleDatabaseWithAdoNet
 
                     //Executa comando e exibe o número de linhas afetadas
                     return command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Executa a consulta e retorna a primeira coluna da primeira linha no resultset retornado pela consulta. Colunas ou linhas extras são ignoradas.
+        /// </summary>
+        /// <param name="commandSql"></param>
+        /// <returns></returns>
+        protected object ExecuteScalar(CommandSql commandSql)
+        {
+            AbstractDatabase database = DatabaseFactory.CreateDatabase(commandSql.EnumDatabaseType, commandSql.StringConnection);
+            using (IDbConnection connection = database.CreateOpenConnection())
+            {
+                using (IDbCommand command = database.CreateCommand(commandSql.CommandText, connection))
+                {
+                    //Adiciona os parametros no command
+                    if (commandSql.Parametros != null)
+                    {
+                        commandSql.Parametros.ForEach(x => command.Parameters.Add(x));
+                    }
+
+                    //Define consfigurações do command
+                    command.CommandType = commandSql.CommandType;
+                    command.CommandTimeout = commandSql.CommandTimeout;
+
+                    //Executa comando e exibe o número de linhas afetadas
+                    return command.ExecuteScalar();
                 }
             }
         }
