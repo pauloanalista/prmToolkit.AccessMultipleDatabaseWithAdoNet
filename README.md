@@ -23,11 +23,6 @@ Para adicionar somente a referencia a dll
 ```sh
 Install-Package prmToolkit.AccessMultipleDatabaseWithAdoNet
 ```
-
-Para adicionar somente as classes
-```sh
-Install-Package prmToolkit.AccessMultipleDatabaseWithAdoNet-Source
-```
 ### Exemplo de como usar
 
 ```sh
