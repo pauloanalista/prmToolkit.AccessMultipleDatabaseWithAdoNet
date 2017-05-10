@@ -90,6 +90,26 @@ namespace prmToolkit.AccessMultipleDatabaseWithAdoNet
         }
 
         #endregion
+
+        #region Métodos
+        /// <summary>
+        /// Adiciona parametros para instrução Sql que deseja executar
+        /// </summary>
+        /// <param name="parameter">Parametros da instrução SQL</param>
+        public void AddParameter(DbParameter parameter)
+        {
+            _parametros.Add(parameter);
+        }
+
+        /// <summary>
+        /// Adiciona lista de parametros para instrução Sql que deseja executar
+        /// </summary>
+        /// <param name="parameters">Lista de parametros da instrução SQL</param>
+        public void AddParameters(IList<DbParameter> parameters)
+        {
+            _parametros.AddRange(parameters);
+        }
+        #endregion
     }
 }
 
