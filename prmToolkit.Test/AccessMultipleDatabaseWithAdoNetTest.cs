@@ -7,7 +7,7 @@ namespace prmToolkit.Test
 {
 
     [TestClass]
-    public class AccessMultipleDatabaseWithAdoNetTest : AbstractRepository //herrda
+    public class AccessMultipleDatabaseWithAdoNetTest : AbstractRepository
     {
         [TestMethod()]
         public void ObterDadosTest()
@@ -19,11 +19,11 @@ namespace prmToolkit.Test
             string query = @"select u.nome, u.login, u.senha from usuario u;";
             
             //Define em que banco será executada a aquery
-            CommandSql cmd = new CommandSql(stringConexao, query, EnumDatabaseType.MySql);
+            CommandSql cmd = new CommandSql(stringConexao, query, EnumDatabaseType.MySql,500);
+
 
             //Obtem os dados do banco de dados MySql
             List<Usuario> usuarios = GetCollection<Usuario>(cmd)?.ToList();
-
 
             Assert.IsTrue(usuarios.Count() > 0);
         }

@@ -1,5 +1,6 @@
 ﻿using FirebirdSql.Data.FirebirdClient;
 using System.Data;
+using System;
 
 namespace prmToolkit.AccessMultipleDatabaseWithAdoNet.Databases
 {
@@ -19,7 +20,7 @@ namespace prmToolkit.AccessMultipleDatabaseWithAdoNet.Databases
         {
             FbConnection connection = (FbConnection)CreateConnection();
             connection.Open();
-
+            
             return connection;
         }
 

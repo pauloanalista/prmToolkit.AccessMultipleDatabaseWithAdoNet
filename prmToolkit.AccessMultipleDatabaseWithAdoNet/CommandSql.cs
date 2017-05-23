@@ -53,6 +53,25 @@ namespace prmToolkit.AccessMultipleDatabaseWithAdoNet
             this._commandTimeout = 140;
             this._enumDatabaseType = enumDatabaseType;
         }
+
+        /// <summary>
+        /// Realiza consulta no banco de dados com apenas a querie passada por parametro e banco de dados selecionado.
+        /// Neste caso não será necessário passar alguns parametros, pois eles receberam os seguintes valores: Parametros=null, CommandTimeout=140, CommandType=Text
+        /// </summary>
+        /// <param name="stringConnection">String de conexão</param>
+        /// <param name="commandText">Querie a ser executada</param>
+        /// <param name="enumDatabaseType">Tipo de banco de dados que será realizada a consulta</param>
+        /// <param name="commandTimeout">Define o time out do comando a ser executado.</param>
+        public CommandSql(string stringConnection, string commandText, EnumDatabaseType enumDatabaseType, int commandTimeout = 140)
+        {
+            this._stringConnection = stringConnection;
+            this._commandText = commandText;
+            this._parametros = null;
+            this._commandType = CommandType.Text;
+            this._commandTimeout = commandTimeout;
+            this._enumDatabaseType = enumDatabaseType;
+        }
+
         /// <summary>
         /// Realiza consulta no banco de dados com apenas os seguintes parametros: querie, parametros e enumDatabaseType.
         /// Neste caso os parametros internos recebem os seguintes valores: CommandTimeout=140, CommandType=Text
@@ -68,6 +87,25 @@ namespace prmToolkit.AccessMultipleDatabaseWithAdoNet
             this._parametros = parametros;
             this._commandType = CommandType.Text;
             this._commandTimeout = 140;
+            this._enumDatabaseType = enumDatabaseType;
+        }
+
+        /// <summary>
+        /// Realiza consulta no banco de dados com apenas os seguintes parametros: querie, parametros e enumDatabaseType.
+        /// Neste caso os parametros internos recebem os seguintes valores: CommandTimeout=140, CommandType=Text
+        /// </summary>
+        /// <param name="stringConnection">String de conexão</param>
+        /// <param name="commandText">Querie a ser executada</param>
+        /// <param name="parametros">Parametros que foram adicionados a querie</param>
+        /// <param name="enumDatabaseType">Tipo de banco de dados que será realizada a consulta</param>
+        /// /// <param name="commandTimeout">Define o time out do comando a ser executado.</param>
+        public CommandSql(string stringConnection, string commandText, List<DbParameter> parametros, EnumDatabaseType enumDatabaseType, int commandTimeout = 140)
+        {
+            this._stringConnection = stringConnection;
+            this._commandText = commandText;
+            this._parametros = parametros;
+            this._commandType = CommandType.Text;
+            this._commandTimeout = commandTimeout;
             this._enumDatabaseType = enumDatabaseType;
         }
         /// <summary>
